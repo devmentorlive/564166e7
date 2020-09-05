@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+
 import TextField from "../text-field";
 
 export default function Filter({ render, placeholder }) {
@@ -18,7 +19,6 @@ export default function Filter({ render, placeholder }) {
 }
 
 Filter.propTypes = {
-  fn: PropTypes.func.isRequired,
   placeholder: PropTypes.string.isRequired,
   render: PropTypes.func.isRequired,
 };

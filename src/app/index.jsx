@@ -1,11 +1,11 @@
 import React from "react";
-import ListItem from "./list-item";
+
 import "./styles.css";
 
-import Filter from "./filter";
-import List from "./list";
-
 import screencasts from "../data/screencasts.json";
+import List from "./list";
+import Filter from "./filter";
+import Screencast from "./screencast";
 
 export default function App() {
   function filterScreencasts(query, screencasts) {
@@ -15,19 +15,22 @@ export default function App() {
         -1
     );
   }
+
   return (
-    <div>
-      <Filter
-        placeholder='Type to filter the screencasts'
-        render={(query) => (
-          <List
-            items={filterScreencasts(query, screencasts)}
-            render={(screencast) => (
-              <ListItem screencast={screencast} />
-            )}
-          />
-        )}
-      />
-    </div>
+    <Filter
+      placeholder='Type to filter the screencasts..'
+      render={(query) => (
+        <List
+          items={filterScreencasts(query, screencasts)}
+          id='ext_id'
+          render={(screencast) => (
+            <Screencast
+              ext_id={screencast.ext_id}
+              title={screencast.title}
+            />
+          )}
+        />
+      )}
+    />
   );
 }
