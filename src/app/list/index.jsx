@@ -1,24 +1,18 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export default function List({ items }) {
+export default function List({ items, id, render }) {
   return (
     <ul>
       {items.map((item) => (
-        <li>
-          <div className='__dml_list_item'>
-            <a
-              href={`https://www.youtube.com/watch?v=${item.ext_id}`}
-            >
-              <img
-                src={`/thumbs/${item.ext_id}.png`}
-                width='100%'
-                alt={item.title}
-              />
-              <div>{item.title}</div>
-            </a>
-          </div>
-        </li>
+        <li key={item[id]}>{render(item)}</li>
       ))}
     </ul>
   );
 }
+
+List.propTypes = {
+  render: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  items: PropTypes.array.isRequired,
+};
