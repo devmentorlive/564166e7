@@ -1,0 +1,11 @@
+.__dml_screencast {
+  width: 380px;
+  border: 1px solid black;
+  margin: 1rem;
+  text-align: center;
+}
+
+.__dml_screencast a {
+  font-size: 1rem;
+  text-decoration: none;
+}

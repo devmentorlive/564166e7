@@ -1,9 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import "./styles.css";
+
 export default function List({ items, id, render }) {
   return (
-    <ul>
+    <ul className='__dml-list'>
       {items.map((item) => (
         <li key={item[id]}>{render(item)}</li>
       ))}
