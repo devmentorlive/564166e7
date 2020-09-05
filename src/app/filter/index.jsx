@@ -19,7 +19,6 @@ export default function Filter({ render, placeholder }) {
 }
 
 Filter.propTypes = {
-  fn: PropTypes.func.isRequired,
   placeholder: PropTypes.string.isRequired,
   render: PropTypes.func.isRequired,
 };

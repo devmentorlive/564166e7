@@ -1,0 +1,11 @@
+ul.__dml-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul.__dml-list li {
+  display: inline-block;
+  margin: 0.25rem 0.5rem;
+  font-size: 1.25rem;
+}
