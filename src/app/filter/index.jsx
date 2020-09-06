@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 
 export default function Filter({ render, placeholder }) {
   const [query, setQuery] = useState("");
@@ -16,8 +15,3 @@ export default function Filter({ render, placeholder }) {
     </div>
   );
 }
-
-Filter.propTypes = {
-  placeholder: PropTypes.string.isRequired,
-  render: PropTypes.func.isRequired,
-};
