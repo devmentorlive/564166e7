@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function List({ items, id, render }) {
   return (
@@ -9,3 +10,9 @@ export default function List({ items, id, render }) {
     </ul>
   );
 }
+
+List.propTypes = {
+  render: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  items: PropTypes.array.isRequired,
+};
